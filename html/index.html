@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World 示例</title>
+    <style>
+        /* 简单的全局样式，让页面更整洁 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(145deg, #0b2b3f 0%, #1b4f6e 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
+            padding: 1rem;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            border-radius: 3rem;
+            padding: 3rem 5rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.05);
+            text-align: center;
+            transition: transform 0.25s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 30px 50px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.2);
+        }
+
+        .greeting {
+            font-size: 5.5rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            color: #f6f9fc;
+            text-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+            margin-bottom: 0.3rem;
+        }
+
+        .sub {
+            font-size: 1.2rem;
+            font-weight: 300;
+            color: #c2dceb;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            opacity: 0.9;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            padding-top: 0.8rem;
+            display: inline-block;
+        }
+
+        /* 小屏适配 */
+        @media (max-width: 500px) {
+            .card {
+                padding: 2rem 1.5rem;
+                border-radius: 2rem;
+            }
+            .greeting {
+                font-size: 3.8rem;
+            }
+            .sub {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="greeting">👋 Hello, World!</div>
+        <div class="sub">欢迎 · 开始你的探索</div>
+    </div>
+</body>
+</html>
